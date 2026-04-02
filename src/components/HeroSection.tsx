@@ -18,7 +18,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <p className="font-mono text-primary text-sm md:text-base mb-4 tracking-widest uppercase">
-            Full Stack Developer · AI · Security
+            Full Stack Developer · GenAI Engineer · Builder
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading mb-6 leading-tight">
             Tenzin Thinlay
@@ -26,8 +26,9 @@ const HeroSection = () => {
             <span className="text-gradient">Bhutia</span>
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Building scalable web architectures, AI-driven tools, and security
-            solutions. 4+ years crafting enterprise-grade software.
+            4+ years building enterprise platforms at Tecnotree. Now shipping
+            AI-powered tools with RAG, LLMs, and agentic workflows — from
+            browser extensions to algorithmic trading bots.
           </p>
         </motion.div>
 
