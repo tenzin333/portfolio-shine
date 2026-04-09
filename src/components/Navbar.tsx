@@ -43,7 +43,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="/Tenzin_Thinlay_Base_FS.pdf"
+            href="/Tenzin_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity"

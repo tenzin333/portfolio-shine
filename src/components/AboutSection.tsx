@@ -34,25 +34,29 @@ const ExperienceSection = () => {
             <div className="absolute left-3.5 top-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center">
               <Rocket size={12} className="text-primary-foreground" />
             </div>
-            <p className="font-mono text-primary text-xs mb-1">2024 — Present</p>
-            <h3 className="text-xl font-bold font-heading mb-1">AI / GenAI Engineering</h3>
-            <p className="text-muted-foreground text-sm mb-3">Independent Projects & Career Transition</p>
+            <p className="font-mono text-primary text-xs mb-1">2025 — Present</p>
+            <h3 className="text-xl font-bold font-heading mb-1">AI / GenAI Projects</h3>
+            <p className="text-muted-foreground text-sm mb-3">Extending into GenAI & LLM-Powered Applications</p>
             <ul className="text-muted-foreground text-sm space-y-2">
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">▹</span>
-                Built and shipped DeepTrail — a Chrome Extension (MV3 + React 18) with FastAPI backend, pgvector on Neon.tech, Gemini embeddings, and Groq/Llama 3 for context-aware browsing intelligence. Live on the Chrome Web Store.
+                Built and shipped DeepTrail — a full RAG pipeline (Gemini embeddings → pgvector → Groq/Llama 3 synthesis) packaged as a Chrome Extension (MV3 + React 18) with FastAPI backend on Render and PostgreSQL on Neon.tech. Live on the Chrome Web Store.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">▹</span>
-                Developing SigmaTrader — a BTC/USDT algorithmic trading bot using RSI mean reversion strategy, backtested over 314 trades (45.2% win rate, 1.22 profit factor). Python, FastAPI, Next.js, Binance API.
+                Developing SigmaTrader — a BTC/USDT algorithmic trading bot using RSI mean reversion strategy, backtested over 314 trades (45.2% win rate, 1.22 profit factor). Python, FastAPI, Next.js, Binance API. Planning LLM sentiment filter via Groq.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">▹</span>
-                Completed a 14-day GenAI engineering sprint covering LLM foundations, RAG pipelines, agentic workflows, fine-tuning, system design, guardrails, and mock interviews.
+                Built Lumen AI — a Chrome Extension providing real-time AI analysis of web content via Groq's Llama 3.1 inference, with context-aware summarization and BYOK vault for zero-knowledge privacy.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">▹</span>
-                Built Lumen AI (Chrome Extension using Groq/Llama 3.1 for real-time webpage analysis) and Autonomous Bounty Hunter (ReAct-style AI security agent with Semgrep + Llama).
+                Built Autonomous Bounty Hunter — a ReAct-style AI security agent using Semgrep for vulnerability detection, LLM-generated security patches, and on-chain audit logging via Solidity smart contracts.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">▹</span>
+                Completed a 14-day GenAI engineering sprint covering RAG pipelines, agentic workflows, prompt engineering, evaluation (RAGAS), system design, and mock interviews.
               </li>
             </ul>
           </motion.div>
@@ -68,12 +72,12 @@ const ExperienceSection = () => {
               <Briefcase size={12} className="text-primary-foreground" />
             </div>
             <p className="font-mono text-primary text-xs mb-1">Dec 2021 — Present</p>
-            <h3 className="text-xl font-bold font-heading mb-1">Full Stack Developer</h3>
+            <h3 className="text-xl font-bold font-heading mb-1">Senior Developer</h3>
             <p className="text-muted-foreground text-sm mb-3">Tecnotree Convergence Pvt Ltd</p>
             <ul className="text-muted-foreground text-sm space-y-2">
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">▹</span>
-                Core contributor to DPM-UI — a promotion management dashboard built with Next.js App Router, TypeScript, shadcn/ui, React Hook Form, and Zod, serving enterprise telecom clients.
+                Core contributor to DPM-UI — an enterprise promotion management dashboard built with Next.js App Router, TypeScript, shadcn/ui, React Hook Form, and Zod, serving telecom clients including Verizon.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">▹</span>
@@ -85,7 +89,7 @@ const ExperienceSection = () => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">▹</span>
-                Implemented ForgeRock and WSO2 SSO authentication with NextAuth, including refresh token handling, redirect loop fixes, and Redis-based distributed locking for token refresh race conditions.
+                Architected OAuth 2.0 SSO authentication with WSO2 and ForgeRock via NextAuth, including refresh token handling, redirect loop fixes, and Redis-based distributed locking for token refresh race conditions.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">▹</span>
@@ -93,7 +97,11 @@ const ExperienceSection = () => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">▹</span>
-                Integrated New Relic browser monitoring, pino-based structured logging for OpenSearch, and resolved Docker CVEs and SonarQube compatibility issues across the deployment pipeline.
+                Integrated New Relic browser monitoring and pino-based structured logging for OpenSearch. Managed Docker deployments via Harbor, eliminating critical CVEs from production images.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">▹</span>
+                Optimized RESTful API endpoints improving data retrieval performance by 30% through query optimization and Redis caching. Improved frontend performance by 40% via code-splitting and lazy loading.
               </li>
             </ul>
           </motion.div>

@@ -18,7 +18,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <p className="font-mono text-primary text-sm md:text-base mb-4 tracking-widest uppercase">
-            Full Stack Developer · GenAI Engineer · Builder
+            Full Stack Developer → AI/GenAI
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading mb-6 leading-tight">
             Tenzin Thinlay
