@@ -1,48 +1,55 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const skillCategories = [
   {
     category: "Frontend & Full Stack",
     skills: [
-      { name: "React / Next.js (App Router)", level: 95 },
+      { name: "React / Next.js 15 (App Router)", level: 95 },
       { name: "TypeScript", level: 92 },
-      { name: "React Hook Form / Zod", level: 90 },
-      { name: "shadcn/ui / TailwindCSS", level: 92 },
-      { name: "TanStack Table", level: 85 },
-      { name: "Chrome Extension (MV3)", level: 82 },
+      { name: "shadcn/ui + Tailwind CSS", level: 92 },
       { name: "Node.js / Express", level: 88 },
+      { name: "React Hook Form / Zod", level: 90 },
+      { name: "Chrome Extension (MV3)", level: 82 },
+      { name: "React Flow", level: 78 },
     ],
   },
   {
     category: "AI / GenAI & Data",
     skills: [
-      { name: "RAG Pipelines (pgvector)", level: 85 },
-      { name: "LLM Integration (Groq / Llama)", level: 85 },
-      { name: "Embeddings (Gemini)", level: 82 },
-      { name: "Agentic Workflows (ReAct)", level: 78 },
-      { name: "Python / FastAPI", level: 82 },
-      { name: "Pandas / Backtesting", level: 78 },
+      { name: "RAG Pipelines (pgvector)", level: 88 },
+      { name: "LLM APIs (Gemini / Groq / OpenAI)", level: 86 },
       { name: "Prompt Engineering", level: 85 },
+      { name: "Embeddings (Gemini 768-dim)", level: 83 },
+      { name: "Python / FastAPI", level: 83 },
+      { name: "Agentic Workflows (ReAct)", level: 78 },
+      { name: "LangChain / RAGAS / MCP", level: 76 },
     ],
   },
   {
     category: "Infrastructure & DevOps",
     skills: [
-      { name: "Docker", level: 80 },
-      { name: "Jenkins CI/CD", level: 82 },
-      { name: "Vitest / React Testing Library", level: 85 },
-      { name: "OAuth SSO (ForgeRock / WSO2)", level: 88 },
-      { name: "New Relic / Pino / OpenSearch", level: 78 },
+      { name: "OAuth 2.0 (WSO2 / ForgeRock)", level: 88 },
+      { name: "Docker / AWS EC2 / S3", level: 84 },
+      { name: "GitLab CI/CD / GitHub Actions", level: 83 },
       { name: "PostgreSQL / Redis / MongoDB", level: 82 },
-      { name: "Git / SonarQube", level: 88 },
+      { name: "Vitest / React Testing Library", level: 82 },
+      { name: "New Relic / Pino / OpenSearch", level: 78 },
+      { name: "Harbor / SonarQube", level: 75 },
     ],
   },
 ];
 
+const filters = ["All", "Frontend & Full Stack", "AI / GenAI & Data", "Infrastructure & DevOps"];
+
 const SkillsSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const [active, setActive] = useState("All");
+
+  const filtered = active === "All"
+    ? skillCategories
+    : skillCategories.filter((c) => c.category === active);
 
   return (
     <section id="skills" className="py-24 md:py-32 bg-card/30">
@@ -53,13 +60,35 @@ const SkillsSection = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="font-mono text-primary text-sm mb-2">// skills</p>
-          <h2 className="text-3xl md:text-5xl font-bold font-heading mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">
             Tech <span className="text-gradient">Stack</span>
           </h2>
         </motion.div>
 
+        {/* Filter tabs */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="flex flex-wrap gap-2 mb-10"
+        >
+          {filters.map((f) => (
+            <button
+              key={f}
+              onClick={() => setActive(f)}
+              className={`px-4 py-1.5 rounded-md text-xs font-mono border transition-all ${
+                active === f
+                  ? "border-primary/60 bg-primary/10 text-primary"
+                  : "border-border text-muted-foreground hover:border-primary/30 hover:text-foreground"
+              }`}
+            >
+              {f === "Frontend & Full Stack" ? "Frontend" : f === "AI / GenAI & Data" ? "AI / GenAI" : f === "Infrastructure & DevOps" ? "Infra" : f}
+            </button>
+          ))}
+        </motion.div>
+
         <div className="grid md:grid-cols-3 gap-8">
-          {skillCategories.map((cat, ci) => (
+          {filtered.map((cat, ci) => (
             <motion.div
               key={cat.category}
               initial={{ opacity: 0, y: 30 }}

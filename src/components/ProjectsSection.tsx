@@ -18,18 +18,37 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <p className="font-mono text-primary text-sm md:text-base mb-4 tracking-widest uppercase">
-            Full Stack Developer → AI/GenAI
+            Full Stack Developer → AI / GenAI
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading mb-6 leading-tight">
             Tenzin Thinlay
             <br />
             <span className="text-gradient">Bhutia</span>
           </h1>
-          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-6 leading-relaxed">
             4+ years building enterprise platforms at Tecnotree. Now shipping
-            AI-powered tools with RAG, LLMs, and agentic workflows — from
-            browser extensions to algorithmic trading bots.
+            AI-native tools — RAG pipelines, LLM agents, and agentic workflows
+            — from browser extensions to SaaS.
           </p>
+        </motion.div>
+
+        {/* AskMyDocs featured badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="inline-flex items-center gap-2.5 px-4 py-2.5 mb-8 rounded-lg border border-primary/20 bg-primary/5 text-sm text-muted-foreground hover:border-primary/40 hover:bg-primary/10 transition-all cursor-default"
+        >
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400" />
+          </span>
+          <span>Latest:</span>
+          <span className="text-primary font-semibold">AskMyDocs</span>
+          <span className="text-muted-foreground/40">—</span>
+          <span className="text-xs text-muted-foreground/60 hidden sm:inline">
+            RAG · pgvector · Gemini · Next.js 15 · AWS
+          </span>
         </motion.div>
 
         <motion.div
@@ -66,6 +85,7 @@ const HeroSection = () => {
           transition={{ delay: 0.6 }}
           className="flex items-center justify-center gap-6"
         >
+        
           {[
             { icon: Github, href: "https://github.com/tenzin333", label: "GitHub" },
             { icon: Linkedin, href: "https://linkedin.com/in/tenthinlay1", label: "LinkedIn" },
