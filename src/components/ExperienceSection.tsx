@@ -77,31 +77,35 @@ const ExperienceSection = () => {
             <ul className="text-muted-foreground text-sm space-y-2">
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">▹</span>
-                Core contributor to DPM-UI — an enterprise promotion management dashboard built with Next.js App Router, TypeScript, shadcn/ui, React Hook Form, and Zod, serving telecom clients including Verizon.
+                Developed LLM-powered retrieval workflows and AI tooling integrations using FastAPI, vector search, and modern GenAI application patterns alongside enterprise platform engineering.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">▹</span>
-                Engineered complex nested form systems including criteria builders with alias badges, part number validation, and correlation group handling for promotion configuration.
+                Integrated MCP (Model Context Protocol) server workflows and TypeScript-based AI tooling over TMF 671 APIs with token pass-through authentication and structured tool orchestration.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">▹</span>
-                Built bulk promotion export/import wizards and bulk lifecycle update workflows, significantly reducing manual operator overhead.
+                Designed asynchronous data-processing and transformation pipelines with validation, retry handling, and distributed workflow coordination — architectural patterns later applied in RAG ingestion and embedding systems.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">▹</span>
-                Architected OAuth 2.0 SSO authentication with WSO2 and ForgeRock via NextAuth, including refresh token handling, redirect loop fixes, and Redis-based distributed locking for token refresh race conditions.
+                Integrated New Relic Browser Agent with structured logging (Pino) for observability, monitoring, and debugging across distributed Next.js services and API workflows.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">▹</span>
-                Led a UI unit testing initiative using Vitest + React Testing Library targeting 80% coverage, with Jenkins CI/CD integration and a 6-week rollout plan.
+                Architected OAuth 2.0 SSO authentication using WSO2, ForgeRock, and NextAuth; resolved distributed token refresh race conditions using Redis-based synchronization and locking mechanisms.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">▹</span>
-                Integrated New Relic browser monitoring and pino-based structured logging for OpenSearch. Managed Docker deployments via Harbor, eliminating critical CVEs from production images.
+                Managed Dockerized deployments, Harbor image security, and GitLab CI/CD automation for enterprise applications; improved deployment reliability and reduced production vulnerabilities.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">▹</span>
-                Optimized RESTful API endpoints improving data retrieval performance by 30% through query optimization and Redis caching. Improved frontend performance by 40% via code-splitting and lazy loading.
+                Improved frontend performance by 40% through code-splitting, lazy loading, caching optimization, and efficient rendering strategies across large-scale React/Next.js applications.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">▹</span>
+                Leveraged AI-assisted engineering workflows using Claude Code, Cursor, GitHub Copilot, and prompt-driven development practices to accelerate feature delivery and developer productivity.
               </li>
             </ul>
           </motion.div>
